@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상세페이지 미리보기</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #fafafa;
+            display: flex;
+            justify-content: center;
+            padding-top: 20vh;
+            padding-bottom: 120px;
+            min-height: 100vh;
+        }
+        .wrapper {
+            width: 860px;
+        }
+        .wrapper img {
+            width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper" id="wrapper"></div>
+    <script>
+        // 🔧 이미지 파일명을 순서대로 나열
+        const IMAGE_FILES = [
+            // '01_hero.jpg',
+            // '02_detail.png',
+            'orajet_image_860px.jpg',
+        ];
+
+        const wrapper = document.getElementById('wrapper');
+        IMAGE_FILES.forEach(file => {
+            const img = document.createElement('img');
+            img.src = `images/${file}`;
+            img.alt = file;
+            img.loading = 'lazy';
+            wrapper.appendChild(img);
+        });
+    </script>
+</body>
+</html>
