@@ -16,9 +16,13 @@
         }
         .wrapper {
             width: 600px;
+            max-width: 100%;
+            flex-shrink: 0;
         }
-        .wrapper img {
+        .wrapper img,
+        .wrapper video {
             width: 100%;
+            height: auto;
             display: block;
         }
     </style>
@@ -26,7 +30,6 @@
 <body>
     <div class="wrapper" id="wrapper"></div>
     <script>
-        // 🔧 이미지 파일명을 순서대로 나열
         const IMAGE_FILES = [
             '0.gif',
             '1.jpg',
